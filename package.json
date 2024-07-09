@@ -1,0 +1,26 @@
+{
+  "name": "vitepress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs",
+    "start": "vitepress dev docs",
+    "deploy": "rsync -r ./docs/.vitepress/dist/ root@47.121.196.143:/home/blog",
+    "pre": "node index.js",
+    "push": "sh deploy.sh",
+    "ng": "scp -r nginx.conf root@47.121.196.143:/etc/nginx/",
+    "备注": "nginx -s reload"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vitepress": "^1.3.0"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
